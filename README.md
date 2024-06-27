@@ -21,8 +21,13 @@ Antes de começar, assegure-se de ter instalado:
 - Um navegador web moderno
 - Uma conexão estável com a internet
 
+## Site
+
+O site do Casal Raiz Bar está disponível em: [https://casal-raiz-bar.vercel.app/](https://casal-raiz-bar.vercel.app/)
+
 ## Instalação e Uso
 
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
