@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Casal Raiz - Bar</title>
+</head>
+<body class="background-blur min-h-screen">
+
+    <!-- HEADER -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center bg-xs">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img
+                src="./assets/logo.jpg"
+                alt="Logo CasalRaiz"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+            <h1 class="bg-zinc-900 rounded-lg px-4 py-1 text-4xl mt-4 mb-2 font-bold text-white">Casal Raiz</h1>
+
+            <span class="bg-zinc-900 rounded-lg px-4 py-1 text-white font-medium">Rua General Carneiro 80c, Jardim Ana Estela, Carapicuíba - SP</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg à Qui - 13:30 as 21:30</span>
+            </div>
+
+        </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+    
+    <!-- INICIO MENU -->
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/beats-senses.jpeg"
+                alt="Beats Senses"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Beats Senses</p>
+                    <p class="text-sm">330ml | O azul de Beats Senses desperta os sentidos. Com sabor cítrico, refrescante e surpreendente.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 10</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Beats Senses"
+                            data-price="10"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/budweiser.jpeg"
+                alt="Budweiser"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Budweiser</p>
+                    <p class="text-sm">330ml | O processo de produção diferenciado, por utilizar lascas de Beechwood (madeira especial) durante os processos de fermentação e maturação.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 9</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Budweiser"
+                            data-price="32.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/corona-extra.jpeg"
+                alt="Corona Extra"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Corona Extra</p>
+                    <p class="text-sm">330ml | Refrescantes, cervejas naturais para socializar.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 11</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Corona Extra"
+                            data-price="11"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/draft.jpeg"
+                alt="Draft"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Draft</p>
+                    <p class="text-sm">600ml | Do melhor chopp, produzido com o mais puro malte e lúpulo de excelência.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 12</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Draft"
+                            data-price="12"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/heineken.jpeg"
+                alt="Heineken"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Heineken</p>
+                    <p class="text-sm">330ml | É sempre incrível ver uma Heineken gelada, refrescante e de alta qualidade em qualquer lugar.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 10</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Heineken"
+                            data-price="10"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/original.jpeg"
+                alt="Cerveja Original"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Cerveja Original</p>
+                    <p class="text-sm">600ml | Cerveja do tipo Pilsen, tem sabor suave, com leve amargor e aroma de lúpulo.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 12</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Cerveja Original"
+                            data-price="12"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/whitehorse.jpeg"
+                alt="WhiteHorse"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">WhiteHorse</p>
+                    <p class="text-sm">1L | Com um sabor encorpado, que combina de maneira perfeita a cevada, o malte, diferentes grãos e a água.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 85</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="WhiteHorse"
+                            data-price="85"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/cabare-fire.jpeg"
+                alt="Cabaré Fire"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Cabaré Fire</p>
+                    <p class="text-sm">1L | Se você procura um coquetel que une sabor e potência, o Cabaré Fire é a escolha perfeita para você.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 50</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Cabaré Fire"
+                            data-price="50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/josecuervo.jpeg"
+                alt="José Cuervo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">José Cuervo</p>
+                    <p class="text-sm">750ml | De sabor amadeirado, levemente doce, com notas de agave e baunilha e com mais de 250 anos.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 200</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="José Cuervo"
+                            data-price="200"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/licor-43.jpeg"
+                alt="Licor 43"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Licor 43</p>
+                    <p class="text-sm">700ml | Perfeito quando consumido puro, recém tirado do freezer e em deliciosos drinks.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 200</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Licor 43"
+                            data-price="200"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/martini.jpeg"
+                alt="Martini"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Martini</p>
+                    <p class="text-sm">750ml | Pode ser apreciado puro, sobre gelo e em diversos coquetéis.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 45</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Martini"
+                            data-price="45"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/XV-novembro.jpeg"
+                alt="XV de Novembro"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">XV de Novembro</p>
+                    <p class="text-sm">720ml | Aromas persistentes e frutados, possuindo uma sensação de bom volume em boca, acidez equilibrada, paladar típico das variedades.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 26</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="XV de Novembro"
+                            data-price="26"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Refrigerantes e Sucos
+            </h2>
+        </div>
+
+        <!-- GRID REFRIGERANTES E SUCOS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!-- REFRIGERANTE E SUCOS ITEM -->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/refri-1.png"
+                alt="Coca lata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca lata</p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca lata"
+                            data-price="6"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM BEBIDA ITEM -->
+
+            <!-- BEBIDA ITEM -->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/refri-2.png"
+                alt="Guaraná lata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná lata</p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná lata"
+                            data-price="6"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM BEBIDA ITEM -->
+
+        </div>
+        <!-- FIM GRID BEBIDAS -->
+
+    </div>
+    <!-- FIM MENU -->
+
+    <!-- MODAL CART -->
+    <div
+    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal"
+    >
+        <div class="bg-zinc-900 p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col border-solid border-2 border-white rounded-lg px-3 py-2"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input
+            type="text"
+            placeholder="Digite seu endereço completo..."
+            id="address"
+            class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- FIM MODAL CART -->
+
+    <!-- BUTTON CART FOOTER-->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+        >
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!-- FIM BUTTON CART FOOTER-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
