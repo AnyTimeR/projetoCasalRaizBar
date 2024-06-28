@@ -73,6 +73,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Beats Senses"
                             data-price="10"
+                            data-image="./assets/beats-senses.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -99,6 +100,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Budweiser"
                             data-price="9"
+                            data-image="./assets/budweiser.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -125,6 +127,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Corona Extra"
                             data-price="11"
+                            data-image="./assets/corona-extra.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -151,6 +154,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Draft"
                             data-price="12"
+                            data-image="./assets/draft.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -177,6 +181,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Heineken"
                             data-price="10"
+                            data-image="./assets/heineken.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -203,6 +208,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Cerveja Original"
                             data-price="12"
+                            data-image="./assets/original.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -229,6 +235,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="WhiteHorse"
                             data-price="85"
+                            data-image="./assets/whitehorse.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -255,6 +262,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Cabaré Fire"
                             data-price="50"
+                            data-image="./assets/cabare-fire.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -281,6 +289,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="José Cuervo"
                             data-price="200"
+                            data-image="./assets/josecuervo.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -307,6 +316,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Licor 43"
                             data-price="200"
+                            data-image="./assets/licor-43.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -333,6 +343,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Martini"
                             data-price="45"
+                            data-image="./assets/martini.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -359,6 +370,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="XV de Novembro"
                             data-price="26"
+                            data-image="./assets/XV-novembro.jpeg"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -396,6 +408,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Coca lata"
                             data-price="6"
+                            data-image="./assets/refri-1.png"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -422,6 +435,7 @@
                             class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
                             data-name="Guaraná lata"
                             data-price="6"
+                            data-image="./assets/refri-2.png"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -438,23 +452,21 @@
     <!-- FIM MENU -->
 
     <!-- MODAL CART -->
-    <div
-    class="bg-black/90 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
-    id="cart-modal"
-    >
+    <div class="bg-black/90 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+        id="cart-modal">
         <div class="bg-zinc-900 p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2 text-white">Meu carrinho</h2>
-
-            <div id="cart-items" class="flex justify-between mb-2 flex-col border-solid border-2 border-white rounded-lg px-3 py-2"></div>
+            
+            <div id="cart-items" class="flex justify-between mb-2 flex-col border-solid border-2 border-white rounded-lg px-3 py-2 overflow-y-auto max-h-80"></div>
 
             <p class="font-bold text-white">Total: <span id="cart-total">0.00</span></p>
 
             <p class="font-bold mt-4 text-white">Endereço de entrega:</p>
             <input
-            type="text"
-            placeholder="Digite seu endereço completo..."
-            id="address"
-            class="w-full border-2 p-1 rounded my-1"
+                type="text"
+                placeholder="Digite seu endereço completo..."
+                id="address"
+                class="w-full border-2 p-1 rounded my-1"
             />
             <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
@@ -462,10 +474,10 @@
                 <button id="close-modal-btn" class="text-white hover:scale-110">Fechar</button>
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded hover:scale-110">Finalizar pedido</button>
             </div>
-
         </div>
     </div>
     <!-- FIM MODAL CART -->
+
 
     <!-- BUTTON CART FOOTER-->
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
