@@ -3,6 +3,8 @@
 Este é um site desenvolvido para o Casal Raiz Bar, um lugar acolhedor para desfrutar de ótimas bebidas e momentos agradáveis.
 
 ![image](https://github.com/AnytimerBR/projetoCasalRaizBar/assets/160438618/dc6e1d90-2e90-465b-b1f9-551f6d6a6531)
+![image](https://github.com/AnytimerBR/projetoCasalRaizBar/assets/160438618/919397bf-2ea3-4869-9948-be345c2e5937)
+
 
 ## Funcionalidades
 
