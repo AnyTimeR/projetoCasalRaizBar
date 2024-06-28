@@ -34,12 +34,13 @@ menu.addEventListener("click", function(event) {
     if(parentButton) {
         const name = parentButton.getAttribute("data-name")
         const price = parseFloat(parentButton.getAttribute("data-price"))
-        addToCart(name, price);
+        const image = parentButton.getAttribute("data-image")
+        addToCart(name, price, image);
     }
 })
 
 // Função para adicionar no carrinho
-function addToCart(name, price) {
+function addToCart(name, price, image) {
     const existingItem = cart.find(item => item.name === name)
 
     if(existingItem) {
@@ -50,6 +51,7 @@ function addToCart(name, price) {
         cart.push({
             name,
             price,
+            image,
             quantity: 1
         })
     }
@@ -58,7 +60,7 @@ function addToCart(name, price) {
 
     Toastify({
         text: "Item adicionado!",
-        duration: 3000,
+        duration: 2000,
         close: true,
         gravity: "top", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
@@ -82,17 +84,18 @@ function updateCartModal() {
         cartItemElement.innerHTML = `
         <div class="flex items-center justify-between text-white">
             <div>
-                <p class="font-medium">• ${item.name}</p>
+                <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-md">
+                <p class="font-bold">${item.name}</p>
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
 
             <div>
-                <button class="add-to-cart-btn hover:scale-110 px-2 py-1 text-green-500" data-name="${item.name}">
+                <button class="add-to-cart-btn hover:scale-110 px-2 py-1 rounded-lg bg-zinc-950 text-green-500" data-name="${item.name}">
                     Adicionar
                 </button>
 
-                <button class="remove-from-cart-btn hover:scale-110 px-2 py-1 text-red-500" data-name="${item.name}">
+                <button class="remove-from-cart-btn hover:scale-110 px-2 py-1 rounded-lg bg-zinc-950 text-red-500" data-name="${item.name}">
                     Remover
                 </button>
             </div>
@@ -121,7 +124,7 @@ cartItemsContainer.addEventListener("click", function(event) {
         addToCart(name);
         Toastify({
             text: "Item adicionado!",
-            duration: 3000,
+            duration: 2000,
             close: true,
             gravity: "top", // `top` or `bottom`
             position: "right", // `left`, `center` or `right`
@@ -137,7 +140,7 @@ cartItemsContainer.addEventListener("click", function(event) {
         removeItemCart(name);
         Toastify({
             text: "Item removido!",
-            duration: 3000,
+            duration: 2000,
             close: true,
             gravity: "top", // `top` or `bottom`
             position: "right", // `left`, `center` or `right`
