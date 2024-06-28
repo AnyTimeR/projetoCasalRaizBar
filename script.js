@@ -80,18 +80,22 @@ function updateCartModal() {
         cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
 
         cartItemElement.innerHTML = `
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between text-white">
             <div>
-                <p class="font-medium">${item.name}</p>
+                <p class="font-medium">• ${item.name}</p>
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
 
-            
-                <button class="remove-from-cart-btn" data-name="${item.name}">
+            <div>
+                <button class="add-to-cart-btn hover:scale-110 px-2 py-1 text-green-500" data-name="${item.name}">
+                    Adicionar
+                </button>
+
+                <button class="remove-from-cart-btn hover:scale-110 px-2 py-1 text-red-500" data-name="${item.name}">
                     Remover
                 </button>
-            
+            </div>
         </div>
         `
 
@@ -110,13 +114,27 @@ function updateCartModal() {
 
 }
 
-// Função para remover o item do carrinho
+// Função para adicionar e remover itens do carrinho
 cartItemsContainer.addEventListener("click", function(event) {
+    if(event.target.classList.contains("add-to-cart-btn")) {
+        const name = event.target.getAttribute("data-name")
+        addToCart(name);
+        Toastify({
+            text: "Item adicionado!",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#22C55E",
+            },
+        }).showToast();
+    }
+
     if(event.target.classList.contains("remove-from-cart-btn")) {
         const name = event.target.getAttribute("data-name")
-
         removeItemCart(name);
-
         Toastify({
             text: "Item removido!",
             duration: 3000,
@@ -128,10 +146,10 @@ cartItemsContainer.addEventListener("click", function(event) {
                 background: "#22C55E",
             },
         }).showToast();
-
     }
 })
 
+// Função para remover o item do carrinho
 function removeItemCart(name) {
     const index = cart.findIndex(item => item.name === name);
 

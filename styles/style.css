@@ -4,7 +4,7 @@
 
 body {
     background-color: #F6F7F8;
-    color: white;
+    color: black;
 }
 
 .background-blur {
@@ -18,6 +18,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(15px); /* Ajuste o valor conforme necessário */
+    backdrop-filter: blur(25px); /* Ajuste o valor conforme necessário */
     z-index: -1;
 }
